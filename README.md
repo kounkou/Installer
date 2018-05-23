@@ -1,4 +1,6 @@
 
+[![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)
+
 # Installer
 
 
