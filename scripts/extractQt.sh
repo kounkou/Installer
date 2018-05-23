@@ -138,7 +138,7 @@ Controller.prototype.FinishedPageCallback = function() {
 }
 EOF
 
-ARGS="-v"
+ARGS=""
 
 chmod u+x $1
 

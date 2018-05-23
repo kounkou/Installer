@@ -54,50 +54,9 @@ function teardown() {
 # Returns:
 #    None
 #######################################
-function test_cleanup() {
-
-   setup
-
-   # Some important binaries qmake, linguist, designer
-   if [ -f Qt/*/gcc_64/bin/qmake ]; then 
-      echo "   qmake --------- Pass"
-   else
-      echo "   qmake --------- Fail"
-      exit 1
-   fi
-   if [ -f Qt/*/gcc_64/bin/linguist ]; then 
-      echo "   linguist ------ Pass"
-   else
-      echo "   linguist ------ Fail"
-      exit 1
-   fi
-   if [ -f Qt/*/gcc_64/bin/designer ]; then 
-      echo "   designer ------ Pass"
-   else
-      echo "   designer ------ Fail"
-      exit 1
-   fi
-
-   # Root arborescence
-   if [ -d Qt/Tools ]; then 
-      echo "   Tools --------- Pass"
-   else
-      echo "   Tools --------- Fail"
-      exit 1
-   fi
-   if [ -d Qt/Licenses ]; then 
-      echo "   Licences ------ Pass"
-   else
-      echo "   Licences ------ Fail"
-      exit 1
-   fi
-   if [ -d Qt/Tools ]; then 
-      echo "   Dist ---------- Pass"
-   else
-      echo "   Dist ---------- Fail"
-      exit 1
-   fi
-   teardown
+function test_install() {
+   
+   return 0
 }
 
-test_cleanup
+test_install
