@@ -2,9 +2,6 @@
 
 set -e
 
-TESTS=${PWD}
-SCRIPTS="../scripts"
-
 # 
 # Perform a soft clean up of all the previous installation files.
 # This includes the :
@@ -22,41 +19,8 @@ SCRIPTS="../scripts"
 # Returns:
 #    None
 #######################################
-function setup() {
-  
-   echo "Entering directory ${SCRIPTS}"
-   cd ${SCRIPTS}
-}
-
-#######################################
-# Performs a cleanup on the files used
-# during the previous installation
-# Globals:
-#    None
-# Arguments:
-#    None
-# Returns:
-#    None
-#######################################
-function teardown() {
-   
-   echo "Exiting directory  ${SCRIPTS}"
-   cd ${TESTS}
-}
-
-#######################################
-# Performs a cleanup on the files used
-# during the previous installation
-# Globals:
-#    None
-# Arguments:
-#    None
-# Returns:
-#    None
-#######################################
 function test_cleanup() {
 
-   setup
    if [ ! -d Qt ]; then
       echo "   Qt ------------ Pass"
    else
@@ -75,7 +39,6 @@ function test_cleanup() {
       echo "   .env ---------- Fail"
       exit 1
    fi
-   teardown
 }
 
 test_cleanup
