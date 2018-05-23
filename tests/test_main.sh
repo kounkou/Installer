@@ -67,7 +67,7 @@ function test_main() {
 
    for qt_version in $(seq 0 ${#hmap[@]}); do
       setup
-      # eval "${hmap[$qt_version]}"
+      eval "${hmap[$qt_version]}"
       teardown
       bash test_install.sh
       setup
