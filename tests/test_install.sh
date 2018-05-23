@@ -21,7 +21,12 @@ set -e
 #######################################
 function test_install() {
    
-   return 0
+   if [ ! -d Qt/Tools ]; then
+      echo "   Qt/Tools ------ Pass"
+   else
+      echo "   Qt/Tools ------ Fail"
+      exit 1
+   fi
 }
 
 test_install
