@@ -32,9 +32,9 @@ function test_main() {
 
    for qt_version in $(seq 0 ${#hmap[@]}); do
       eval "${hmap[$qt_version]}"
-      bash test_install.sh
-      bash cleanup.sh
-      bash test_clean.sh
+      ./test_install.sh
+      ./cleanup.sh
+      ./test_clean.sh
    done
 }
 
