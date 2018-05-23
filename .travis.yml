@@ -1,0 +1,12 @@
+sudo: required
+os: linux
+
+before_install:
+- sudo apt-get update -qq
+
+script:
+- cd tests
+- bash test_main.sh
+notifications:
+  email: false
+  
