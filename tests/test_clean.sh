@@ -55,6 +55,8 @@ function teardown() {
 #    None
 #######################################
 function test_cleanup() {
+
+   return 0
 }
 
 test_cleanup
