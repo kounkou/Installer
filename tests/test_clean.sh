@@ -55,27 +55,6 @@ function teardown() {
 #    None
 #######################################
 function test_cleanup() {
-
-   setup
-   if [ ! -d Qt ]; then 
-      echo "   Qt ------------ Pass"
-   else
-      echo "   Qt ------------ Fail"
-      exit 1
-   fi
-   if [ ! -f qt-opensource-linux-x64-*.run ]; then
-      echo "   .run ---------- Pass"
-   else
-      echo "   .run ---------- Fail"
-      exit 1
-   fi
-   if [ ! -f qt-*.env ]; then
-      echo "   .env ---------- Pass"
-   else
-      echo "   .env ---------- Fail"
-      exit 1
-   fi
-   teardown
 }
 
 test_cleanup
