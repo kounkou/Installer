@@ -56,7 +56,6 @@ function teardown() {
 #######################################
 function test_main() {
 
-   setup
    declare -A hmap=([0]="./installQt.sh 5.11 5.11.0" \
                     [1]="./installQt.sh 5.10 5.10.1" \
                     [2]="./installQt.sh 5.9  5.9.5"  \
@@ -67,12 +66,13 @@ function test_main() {
    echo # prints a nl 
 
    for qt_version in $(seq 0 ${#hmap[@]}); do
+      setup
       eval "${hmap[$qt_version]}"
+      teardown
       bash test_install.sh
       bash cleanup.sh
       bash test_clean.sh
    done
-   teardown
 }
 
 test_main
