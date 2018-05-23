@@ -13,7 +13,7 @@ script:
 - ln -s ../tests/test_clean.sh   test_clean.sh
 - ln -s ../tests/test_install.sh test_install.sh
 - ln -s ../tests/test_main.sh    test_main.sh
-- test_main.sh
+- bash test_main.sh
 
 notifications:
   email: false
