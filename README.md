@@ -1,8 +1,10 @@
 
-   Installer
+[![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)
+
+# Installer
 
 
-# Why ?
+## Why ?
 
   What ???! A new Qt is out ?!!! Raaaah ! I need to
   download that new version, and reinstall my rig with the newest version
@@ -14,7 +16,7 @@
   I created Installer to ease the transition from one
   version of Qt to another version smoothly. Just launch the install.
 
-# Install and example
+## Install and example
 
   Installer can be called with 0 or 2 parameters.
   When called with 0 parameter, Installer will default the
@@ -43,13 +45,13 @@
   $ bash installQt.sh 5.10 5.10.0
   ```
 
-# Contribute
+## Contribute
 
   Your contribution can be as simple as testing that a new version of Qt works
   or by opening an issue, and sending a pull request (the pair...)
   so that I can merge it to the master branch
 
-# Supported versions
+## Supported versions
 
   Currently, the following versions have been tested :
 
