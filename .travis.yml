@@ -5,6 +5,8 @@ before_install:
 - sudo apt-get update -qq
 
 script:
+- chmod +x tests/*.sh
+- chmod +x scripts/*.sh
 - cd tests
 - bash test_main.sh
 notifications:
