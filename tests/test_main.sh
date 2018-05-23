@@ -70,7 +70,9 @@ function test_main() {
       # eval "${hmap[$qt_version]}"
       teardown
       bash test_install.sh
+      setup
       bash cleanup.sh
+      teardown
       bash test_clean.sh
    done
 }
