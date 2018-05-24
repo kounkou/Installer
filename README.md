@@ -6,7 +6,7 @@
 
 ## Why ?
 
-  What ???! A new Qt is out ?!!! Raaaah ! I need to
+  What ?! A new Qt is out ?! Raaaah... I need to
   download that new version, and reinstall my rig with the newest version
   This is gonna take me all the night long again...
   Yeah... Installing Qt can take long hours and require you to 
@@ -55,11 +55,13 @@
 
   Currently, the following versions have been tested :
 
-  | Qt version | Status | Command Params             |
-  |------------|--------|-----------------------------
-  | 5.11       | OK     | $ installQt.sh 5.11 5.11.0 |
-  | 5.10       | ...    | NA                         |
-  | 5.9        | OK     | $ installQt.sh 5.9 5.9.0   |
-  | 5.8        | ...    | NA                         |
+  | Qt version | Status |
+  |------------|--------|
+  | 5.11       | PASS   |
+  | 5.10       | PASS   |
+  | 5.9        | PASS   |
+  | 5.8        | PASS   |
+  | 5.7        | PASS   |
+  | 5.6        | PASS   |
 
 
