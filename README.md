@@ -57,11 +57,11 @@
 
   | Qt version | Status |
   |------------|--------|
-  | 5.11       | PASS   |
-  | 5.10       | PASS   |
-  | 5.9        | PASS   |
-  | 5.8        | PASS   |
-  | 5.7        | PASS   |
-  | 5.6        | PASS   |
+  | 5.11       | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
+  | 5.10       | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
+  | 5.9        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
+  | 5.8        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
+  | 5.7        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
+  | 5.6        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
 
 
