@@ -4,8 +4,8 @@ set -e
 
 # 
 # Perform the installation of the Qt version specified as
-# parameter or install the version 5.9
-# The version 5.9 is the last tested one.
+# parameter or install the last version
+# The version is the last tested one.
 
 QT_MAJ_MIN="${1:-5.11}"
 QT_VERSION="${2:-5.11.0}"
