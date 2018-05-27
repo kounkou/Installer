@@ -24,6 +24,8 @@
   You can call installer the following way
 
   ```shell
+  $ git clone https://github.com/kounkou/Installer.git
+  $ cd scripts
   $ bash installQt.sh
   ```
 
@@ -32,6 +34,8 @@
   version as arguments to the script.
 
   ```shell
+  $ git clone https://github.com/kounkou/Installer.git
+  $ cd scripts
   $ bash installQt.sh X.Y X.Y.0
   ```
   Example :
@@ -42,6 +46,8 @@
   creation of the environment variable.
 
   ```shell
+  $ git clone https://github.com/kounkou/Installer.git
+  $ cd scripts
   $ bash installQt.sh 5.10 5.10.0
   ```
 
