@@ -1,3 +1,4 @@
+<h1><img src="https://www.qt.io/" height=85 alt="logo" title="logo"> Qt</h1>
 
 [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)
 
