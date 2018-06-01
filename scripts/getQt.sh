@@ -59,7 +59,7 @@ function downloadQt() {
 
    if [ ! -f ~/repo/"${QT_EXE}" ]; then
       echo "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
-      wget -P ~/repo -c "$QT_LINK"
+      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
    fi
    
    if [ ! -L "$QT_EXE" ]; then
