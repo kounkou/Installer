@@ -9,6 +9,11 @@ set -e
 QT_VERSION=$1
 QT_MAJ_MIN=$2
 
+# Global variables
+QT_ROOT="https://download.qt.io/archive/qt"
+QT_EXE="qt-opensource-linux-x64-${QT_VERSION}.run"
+QT_LINK="$QT_ROOT/$QT_MAJ_MIN/$QT_VERSION/$QT_EXE"
+
 #######################################
 # Installing Qt might require some dependencies
 # Call this function to install those
@@ -28,7 +33,7 @@ function extractQt() {
    INSTALLER="qt-opensource-linux-x64-${QT_VERSION}.run"
    ENVFILE="qt-${QT_MAJ_MIN}.env"
 
-   ./extractQt.sh "$PWD/$INSTALLER" "$PWD/Qt"
+   ./extractQt.sh "$PWD/$QT_EXE" "$PWD/Qt"
 
    echo Create $ENVFILE in $PWD
    cat << EOF > $ENVFILE
@@ -52,13 +57,13 @@ EOF
 #######################################
 function downloadQt() {
 
-   if [ ! -f ~/repo/"qt-opensource-linux-x64-${QT_VERSION}.run" ]; then
-      echo "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
-      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
+   if [ ! -f ~/repo/"${QT_EXE}" ]; then
+      echo "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
+      wget -P ~/repo -c "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
    fi
    
-   if [ ! -L "qt-opensource-linux-x64-${QT_VERSION}.run" ]; then
-      ln -s ~/repo/"qt-opensource-linux-x64-${QT_VERSION}.run" "qt-opensource-linux-x64-${QT_VERSION}.run"
+   if [ ! -L "$QT_EXE" ]; then
+      ln -s ~/repo/"$QT_EXE $QT_EXE"
    fi
 }
 
