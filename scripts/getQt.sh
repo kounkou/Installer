@@ -11,8 +11,8 @@ QT_MAJ_MIN=$2
 
 # Global variables
 QT_ROOT="https://download.qt.io/archive/qt"
-QT_LINK="$QT_ROOT/$QT_MAJ_MIN/$QT_VERSION/$QT_EXE"
 QT_EXE="qt-opensource-linux-x64-${QT_VERSION}.run"
+QT_LINK="$QT_ROOT/$QT_MAJ_MIN/$QT_VERSION/$QT_EXE"
 
 #######################################
 # Installing Qt might require some dependencies
@@ -59,7 +59,7 @@ function downloadQt() {
 
    if [ ! -f ~/repo/"${QT_EXE}" ]; then
       echo "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
-      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
+      wget -P ~/repo -c "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
    fi
    
    if [ ! -L "$QT_EXE" ]; then
