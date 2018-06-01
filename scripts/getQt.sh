@@ -57,13 +57,13 @@ EOF
 #######################################
 function downloadQt() {
 
-   if [ ! -f ~/repo/${QT_EXE} ]; then
+   if [ ! -f ~/repo/"${QT_EXE}" ]; then
       echo "$QT_ROOT/${QT_MAJ_MIN}/${QT_VERSION}/$QT_EXE"
-      wget -P ~/repo -c $QT_LINK
+      wget -P ~/repo -c "$QT_LINK"
    fi
    
-   if [ ! -L $QT_EXE ]; then
-      ln -s ~/repo/$QT_EXE $QT_EXE
+   if [ ! -L "$QT_EXE" ]; then
+      ln -s ~/repo/"$QT_EXE $QT_EXE"
    fi
 }
 
