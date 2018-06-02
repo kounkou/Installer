@@ -53,12 +53,12 @@ EOF
 function downloadQt() {
 
    if [ ! -f ~/repo/"${INSTALLER}" ]; then
-      echo "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
-      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
+      echo "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/${QT_INSTALLER}"
+      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/${QT_INSTALLER}"
    fi
    
-   if [ ! -L "qt-opensource-linux-x64-${QT_VERSION}.run" ]; then
-      ln -s ~/repo/"qt-opensource-linux-x64-${QT_VERSION}.run" "qt-opensource-linux-x64-${QT_VERSION}.run"
+   if [ ! -L "${QT_INSTALLER}" ]; then
+      ln -s ~/repo/"${QT_INSTALLER}" "${QT_INSTALLER}"
    fi
 }
 
