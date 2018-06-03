@@ -8,6 +8,8 @@ set -e
 
 QT_VERSION=$1
 QT_MAJ_MIN=$2
+INSTALLER="qt-opensource-linux-x64-${QT_VERSION}.run"
+WEB_SITE="https://download.qt.io/archive/qt"
 
 #######################################
 # Installing Qt might require some dependencies
@@ -25,7 +27,6 @@ QT_MAJ_MIN=$2
 #######################################
 function extractQt() {
 
-   INSTALLER="qt-opensource-linux-x64-${QT_VERSION}.run"
    ENVFILE="qt-${QT_MAJ_MIN}.env"
 
    ./extractQt.sh "$PWD/$INSTALLER" "$PWD/Qt"
@@ -52,13 +53,13 @@ EOF
 #######################################
 function downloadQt() {
 
-   if [ ! -f ~/repo/"qt-opensource-linux-x64-${QT_VERSION}.run" ]; then
-      echo "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
-      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/qt-opensource-linux-x64-${QT_VERSION}.run"
+   if [ ! -f ~/repo/"${INSTALLER}" ]; then
+      echo "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
+      wget -P ~/repo -c "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
    fi
    
-   if [ ! -L "qt-opensource-linux-x64-${QT_VERSION}.run" ]; then
-      ln -s ~/repo/"qt-opensource-linux-x64-${QT_VERSION}.run" "qt-opensource-linux-x64-${QT_VERSION}.run"
+   if [ ! -L "${INSTALLER}" ]; then
+      ln -s ~/repo/"${INSTALLER}" "${INSTALLER}"
    fi
 }
 
