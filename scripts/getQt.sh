@@ -9,6 +9,7 @@ set -e
 QT_VERSION=$1
 QT_MAJ_MIN=$2
 INSTALLER="qt-opensource-linux-x64-${QT_VERSION}.run"
+WEB_SITE="https://download.qt.io/archive/qt"
 
 #######################################
 # Installing Qt might require some dependencies
@@ -53,8 +54,8 @@ EOF
 function downloadQt() {
 
    if [ ! -f ~/repo/"${INSTALLER}" ]; then
-      echo "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
-      wget -P ~/repo -c "https://download.qt.io/archive/qt/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
+      echo "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
+      wget -P ~/repo -c "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
    fi
    
    if [ ! -L "${INSTALLER}" ]; then
