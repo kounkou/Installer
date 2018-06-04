@@ -16,7 +16,7 @@ function checkRemoteFile() {
    local status=$(curl --head --silent "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}" | head -n 1)
    local result=`echo "${status}" | grep -q 404`
    
-   if [ ${result} != "" ]; then
+   if [ "${result}" != "" ]; then
       echo "File exists..."
    else
       echo "File ${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER} doesn't exist"
