@@ -12,18 +12,16 @@ INSTALLER="qt-opensource-linux-x64-${QT_VERSION}.run"
 WEB_SITE="https://download.qt.io/archive/qt"
 
 #######################################
-# Installing Qt might require some dependencies
-# Call this function to install those
-# An idea might be to create a configuration file
-# and install dependencies from the config given
-# Globals:
-#    QT_MAJ_MIN
-#    QT_VERSION
-#    CMAKE_VERSION
-# Arguments:
-#    None
-# Returns:
-#    None
+function checkRemoteFile() {
+   status=$(curl --head --silent "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}" | head -n 1)
+   if [ echo "$status" | grep -q 404 ]
+      echo "File exists..."
+   else
+      echo "File ${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER} doesn't exist"
+      exit 1
+   fi
+}
+
 #######################################
 function extractQt() {
 
@@ -38,21 +36,10 @@ EOF
 }
 
 #######################################
-# Installing Qt might require some dependencies
-# Call this function to install those
-# An idea might be to create a configuration file
-# and install dependencies from the config given
-# Globals:
-#    QT_MAJ_MIN
-#    QT_VERSION
-#    CMAKE_VERSION
-# Arguments:
-#    None
-# Returns:
-#    None
-#######################################
 function downloadQt() {
 
+   checkRemoteFile
+   
    if [ ! -f ~/repo/"${INSTALLER}" ]; then
       echo "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
       wget -P ~/repo -c "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}"
