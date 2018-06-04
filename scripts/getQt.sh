@@ -14,7 +14,7 @@ WEB_SITE="https://download.qt.io/archive/qt"
 #######################################
 function checkRemoteFile() {
    local status=$(curl --head --silent "${WEB_SITE}/${QT_MAJ_MIN}/${QT_VERSION}/${INSTALLER}" | head -n 1)
-   local result=$(echo "${status}" | grep -i '200 OK')
+   local result=$(echo "${status}" | grep -i '302 Found')
    
    if [ "${result}" != "" ]; then
       echo "File exists..."
