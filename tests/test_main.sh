@@ -10,8 +10,8 @@ set -e
 #    - environment files
 
 #######################################
-# Performs a cleanup on the files used
-# during the previous installation
+# This test script uses a hashmap in bash (Yeah !)
+# to be able to test for each version of Qt
 # Globals:
 #    None
 # Arguments:
@@ -27,6 +27,7 @@ function test_main() {
                     [3]="./installQt.sh 5.8  5.8.0"  \
                     [4]="./installQt.sh 5.7  5.7.1"  \
                     [5]="./installQt.sh 5.6  5.6.3"  \
+                    [6]="./installQt.sh 5.5  5.5.1"  \
                    )
    echo # prints a nl 
 
