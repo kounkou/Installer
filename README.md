@@ -69,5 +69,5 @@
   | 5.8        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
   | 5.7        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
   | 5.6        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
-
+  | 5.5        | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
 
