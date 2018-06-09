@@ -25,6 +25,7 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh
   ```
@@ -35,6 +36,7 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh X.Y X.Y.0
   ```
@@ -47,9 +49,26 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh 5.10 5.10.0
   ```
+  
+## Launch Qt
+
+   To launch Qt creator, from the scripts directory, use the following commands
+   to navigate to the Qtcreator directory
+   
+   ```shell
+   $ cd Qt/Tools/QtCreator/bin/
+   $ ./qtcreator
+   ```
+
+## Note
+
+   Please note that Installer keeps a repository of offline .run files.
+   You might just want to remove those you don't want to reinstall this soon.
+   The repository is located on your home directory with the name 'repo'
 
 ## Contribute
 
