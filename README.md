@@ -25,6 +25,7 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh
   ```
@@ -35,6 +36,7 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh X.Y X.Y.0
   ```
@@ -47,6 +49,7 @@
 
   ```shell
   $ git clone https://github.com/kounkou/Installer.git
+  $ cd Installer
   $ cd scripts
   $ bash installQt.sh 5.10 5.10.0
   ```
