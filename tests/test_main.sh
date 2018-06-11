@@ -1,3 +1,6 @@
+
+
+
 #!/bin/bash
 
 set -e
@@ -28,7 +31,8 @@ function test_main() {
                     [4]="./installQt.sh 5.7  5.7.1"  \
                     [5]="./installQt.sh 5.6  5.6.3"  \
                     [6]="./installQt.sh 5.5  5.5.1"  \
-                   )
+                    [7]="./installQt.sh 5.4  5.4.1"  \
+                    )
    echo # prints a nl 
 
    for qt_version in $(seq 0 ${#hmap[@]}); do
