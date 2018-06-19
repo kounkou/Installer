@@ -21,7 +21,7 @@ set -e
 #######################################
 function test_main() {
 
-   declare -A hmap=([0]="./installQt.sh 5.11 5.11.0" \
+   declare -A hmap=([0]="./installQt.sh 5.11 5.11.1" \
                     [1]="./installQt.sh 5.10 5.10.1" \
                     [2]="./installQt.sh 5.9  5.9.5"  \
                     [3]="./installQt.sh 5.8  5.8.0"  \
