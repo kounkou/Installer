@@ -83,9 +83,6 @@ function performInstall() {
    fi
 }
 
-sudo apt-get install curl
-sudo apt-get install libgl-dev
-
 displayDependencies
 performInstall
 
