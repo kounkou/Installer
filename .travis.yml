@@ -4,7 +4,6 @@ os: linux
 before_install:
 - sudo apt-get update -qq
 - sudo apt-get install curl 
-- sudo apt-get install libgl-dev
 
 script:
 - chmod +x tests/*.sh
