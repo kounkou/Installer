@@ -90,7 +90,3 @@
   | 5.6.3      | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
   | 5.5.1      | [![Build Status](https://travis-ci.com/kounkou/Installer.svg?branch=master)](https://travis-ci.com/kounkou/Installer)|
 
-
-
-
-std::string str("sed -i 's/viewStart: [0-9]*0*/viewStart: 1/g' geneview_embedding.html; sed -i 's/viewEnd: [0-9]*0*/viewEnd: 5/g' geneview_embedding.html");
